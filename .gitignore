@@ -1,0 +1,5 @@
+.DS_Store
+mcp-publisher
+key.pem
+*.key
+*.pem
