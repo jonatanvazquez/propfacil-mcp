@@ -59,7 +59,8 @@ El backend de producción se mantiene por separado.
 - Configuración genérica: [`.mcp.json`](.mcp.json)
 - Instrucciones para agentes: [`llms-install.md`](llms-install.md)
 - Perfil reutilizable para directorios: [`directory-profile.json`](directory-profile.json)
-- Proceso de publicación: [`docs/directory-submissions.md`](docs/directory-submissions.md)
+- Runbook de lanzamiento: [`docs/launch-runbook.md`](docs/launch-runbook.md)
+- Notas por directorio: [`docs/directory-submissions.md`](docs/directory-submissions.md)
 
 ## Políticas y soporte
 

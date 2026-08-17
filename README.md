@@ -68,7 +68,8 @@ the hosted PropFácil MCP server. The production backend is maintained separatel
 - Generic client configuration: [`.mcp.json`](.mcp.json)
 - Agent-readable installer guidance: [`llms-install.md`](llms-install.md)
 - Reusable directory listing fields: [`directory-profile.json`](directory-profile.json)
-- Submission and release procedure: [`docs/directory-submissions.md`](docs/directory-submissions.md)
+- Launch runbook: [`docs/launch-runbook.md`](docs/launch-runbook.md)
+- Directory-specific notes: [`docs/directory-submissions.md`](docs/directory-submissions.md)
 
 ## Policies and support
 

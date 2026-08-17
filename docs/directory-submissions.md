@@ -1,6 +1,8 @@
 # Directory publication
 
 This repository is the public distribution source for the hosted PropFácil MCP server.
+Use the complete [launch runbook](launch-runbook.md) for go/no-go, release order, verification,
+monitoring and rollback. This page is the compact directory-specific reference.
 
 ## Canonical listing fields
 
