@@ -18,7 +18,7 @@ and publishing tools.
 
 - **MCP endpoint:** `https://www.propfacil.com/api/mcp`
 - **Transport:** Streamable HTTP
-- **Current version:** `1.3.0`
+- **Current version:** `1.3.1`
 - **Server card:** `https://www.propfacil.com/.well-known/mcp/server-card.json`
 - **Documentation:** `https://www.propfacil.com/docs`
 

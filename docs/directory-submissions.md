@@ -28,7 +28,7 @@ the remote Streamable HTTP endpoint. Publication is automated by
 
 1. Confirm that the version in `server.json` matches the deployed server version.
 2. Confirm that the validation workflow passes on `main`.
-3. Create and push a unique semantic version tag such as `v1.3.0`.
+3. Create and push the unique semantic version tag `v1.3.1`.
 4. Verify the published record through the Registry API.
 
 GitHub OIDC is used for namespace verification, so no registry token is stored as a secret.

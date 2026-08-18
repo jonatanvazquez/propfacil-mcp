@@ -35,7 +35,7 @@ jobs:
             -H 'accept: application/json, text/event-stream' \
             -H 'mcp-protocol-version: 2025-06-18' \
             --data '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-06-18","capabilities":{},"clientInfo":{"name":"distribution-check","version":"1.0.0"}}}')"
-          printf '%s\n' "$initialize" | jq -e '.result.serverInfo.name == "propfacil" and .result.serverInfo.version == "1.3.0"'
+          printf '%s\n' "$initialize" | jq -e '.result.serverInfo.name == "propfacil" and .result.serverInfo.version == "1.3.1"'
 
           tools="$(curl --fail-with-body --silent --show-error \
             -X POST https://www.propfacil.com/api/mcp \

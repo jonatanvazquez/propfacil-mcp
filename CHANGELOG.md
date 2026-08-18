@@ -2,10 +2,12 @@
 
 All notable distribution metadata changes are documented here.
 
-## Unreleased
+## 1.3.1 — 2026-08-18
 
 - Added a go/no-go and launch runbook for the Official MCP Registry and downstream directories.
 - Documented verification, monitoring, rollback and immutable Registry version handling.
+- Hardened widget contact normalization for hosts that omit nullable fields.
+- Versioned the property-results MCP Apps resource as v5 to avoid stale host caches.
 
 ## 1.3.0 — 2026-08-17
 

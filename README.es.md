@@ -15,7 +15,7 @@ La búsqueda, las fichas y el contacto disponible son públicos; favoritos, list
 
 - **Endpoint MCP:** `https://www.propfacil.com/api/mcp`
 - **Transporte:** Streamable HTTP
-- **Versión actual:** `1.3.0`
+- **Versión actual:** `1.3.1`
 - **Server card:** `https://www.propfacil.com/.well-known/mcp/server-card.json`
 - **Documentación:** `https://www.propfacil.com/docs`
 

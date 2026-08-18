@@ -21,7 +21,7 @@ release se crea sólo después de aprobar el checklist “go/no-go”.
 |---|---|
 | Repositorio público | Listo: `https://github.com/jonatanvazquez/propfacil-mcp` |
 | Endpoint remoto | Listo: `https://www.propfacil.com/api/mcp` |
-| `server.json` | Válido, nombre `io.github.jonatanvazquez/propfacil`, versión `1.3.0` |
+| `server.json` | Válido, nombre `io.github.jonatanvazquez/propfacil`, versión `1.3.1` |
 | Workflow de validación | Listo y probado en `main` |
 | Workflow del Registry | Listo; se activa con un tag `v*` o manualmente |
 | Assets y textos | Listos en `assets/` y `directory-profile.json` |
@@ -49,7 +49,7 @@ del proveedor. Ningún directorio necesita una API key de PropFácil.
 
 ## 1. Congelar y validar la release
 
-1. Elegir la versión. Para el primer lanzamiento preparado actualmente: `1.3.0` / `v1.3.0`.
+1. Elegir la versión. Para el primer lanzamiento preparado actualmente: `1.3.1` / `v1.3.1`.
 2. Si hubo cambios de producto, actualizar primero el backend y desplegarlo; después actualizar
    `server.json`, el perfil, los README y el changelog.
 3. Confirmar que el árbol de trabajo está limpio y que `main` contiene el commit aprobado.
@@ -80,11 +80,11 @@ usuario de GitHub.
 Con el go/no-go aprobado:
 
 ```sh
-git tag -a v1.3.0 -m "PropFácil MCP 1.3.0"
-git push origin v1.3.0
+git tag -a v1.3.1 -m "PropFácil MCP 1.3.1"
+git push origin v1.3.1
 ```
 
-El tag activa el workflow, valida que `v1.3.0` coincida con `server.json`, valida el documento ante
+El tag activa el workflow, valida que `v1.3.1` coincida con `server.json`, valida el documento ante
 el Registry, obtiene identidad GitHub por OIDC y publica la metadata. No ejecutar manualmente el
 workflow antes del lanzamiento: `workflow_dispatch` también publica.
 
@@ -98,7 +98,7 @@ curl --fail --silent --show-error \
 ```
 
 - [ ] El workflow terminó en `success`.
-- [ ] La API contiene `io.github.jonatanvazquez/propfacil` versión `1.3.0`.
+- [ ] La API contiene `io.github.jonatanvazquez/propfacil` versión `1.3.1`.
 - [ ] La URL remota es exactamente `https://www.propfacil.com/api/mcp`.
 - [ ] Iconos, repositorio y website abren correctamente desde el registro publicado.
 
@@ -209,7 +209,7 @@ Para cada cambio público:
 | Campo | Valor |
 |---|---|
 | Responsable | Pendiente |
-| Versión/tag | `1.3.0` / `v1.3.0` (pendiente de publicar) |
+| Versión/tag | `1.3.1` / `v1.3.1` (pendiente de publicar) |
 | Commit del repositorio público | Pendiente |
 | Commit/deployment del backend | Pendiente |
 | Official MCP Registry | Pendiente |
