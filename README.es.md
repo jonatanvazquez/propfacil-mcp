@@ -57,11 +57,14 @@ Este repositorio contiene solamente metadata pública de distribución, document
 El backend de producción se mantiene por separado.
 
 - Metadata del Official MCP Registry: [`server.json`](server.json)
+- Registro oficial activo: [`io.github.jonatanvazquez/propfacil` 1.3.8](https://registry.modelcontextprotocol.io/v0.1/servers?search=io.github.jonatanvazquez%2Fpropfacil)
+- Release de GitHub: [`v1.3.8`](https://github.com/jonatanvazquez/propfacil-mcp/releases/tag/v1.3.8)
 - Configuración genérica: [`.mcp.json`](.mcp.json)
 - Instrucciones para agentes: [`llms-install.md`](llms-install.md)
 - Perfil reutilizable para directorios: [`directory-profile.json`](directory-profile.json)
 - Runbook de lanzamiento: [`docs/launch-runbook.md`](docs/launch-runbook.md)
 - Notas por directorio: [`docs/directory-submissions.md`](docs/directory-submissions.md)
+- Solicitud en Cline Marketplace: [issue #2287](https://github.com/cline/mcp-marketplace/issues/2287)
 
 ## Políticas y soporte
 

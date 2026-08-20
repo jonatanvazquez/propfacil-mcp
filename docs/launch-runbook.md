@@ -27,7 +27,7 @@ corrección exige una versión nueva. El CLI actual permite cambiar el estado de
 | Workflow del Registry | Listo; se activa con un tag `v*` o manualmente |
 | Assets y textos | Listos en `assets/` y `directory-profile.json` |
 | Instrucciones de instalación | Listas en README, `docs/installation.md` y `llms-install.md` |
-| Publicación en catálogos | Pendiente de autorización final; no se ha creado el tag ni enviado formularios |
+| Publicación en catálogos | Registry oficial activo y Cline enviado; los demás estados están en el registro de lanzamiento |
 
 ## Go/no-go
 
@@ -215,15 +215,15 @@ Para cada cambio público:
 
 | Campo | Valor |
 |---|---|
-| Responsable | Pendiente |
-| Versión/tag | `1.3.8` / `v1.3.8` (pendiente de publicar) |
-| Commit del repositorio público | Pendiente |
-| Commit/deployment del backend | Pendiente |
-| Official MCP Registry | `server.json` validado; tag/publicación pendientes |
-| Smithery | CLI/login no disponibles en este equipo; envío pendiente |
-| Cline Marketplace | Borrador listo; prueba real en Cline y issue pendientes |
+| Responsable | Apphive / PropFácil |
+| Versión/tag | `1.3.8` / [`v1.3.8`](https://github.com/jonatanvazquez/propfacil-mcp/releases/tag/v1.3.8) |
+| Commit del repositorio público | `5eb889822b8467e942cb44fdf207f9831eb55f94` |
+| Commit/deployment del backend | `c9941a0` desplegado y verificado en producción |
+| Official MCP Registry | `1.3.8` activo desde 2026-08-20; workflow OIDC exitoso |
+| Smithery | CLI 4.11.1 listo; autenticación del propietario pendiente |
+| Cline Marketplace | Prueba real con Cline CLI 3.0.55 completada; [issue #2287](https://github.com/cline/mcp-marketplace/issues/2287) abierto |
 | Glama | Espera ingestión automática del Registry y posterior claim |
-| MCP.so | Formulario remoto listo; requiere autorizar pago de USD 39 |
+| MCP.so | Datos enviados al checkout; pago Stripe de USD 39 pendiente de método de pago |
 | PulseMCP | Altas manuales pausadas; espera ingestión automática del Registry |
 
 Los valores reutilizables para cada formulario están en
