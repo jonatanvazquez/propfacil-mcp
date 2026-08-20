@@ -1,7 +1,7 @@
 # Cline Marketplace submission draft
 
-Do not create the public issue until a real Cline installation test passes. The current issue template
-requires both checkboxes to be true.
+Submitted as [cline/mcp-marketplace#2287](https://github.com/cline/mcp-marketplace/issues/2287)
+on **20 August 2026** after a real installation test with Cline CLI 3.0.55.
 
 ## Issue title
 
@@ -17,7 +17,7 @@ requires both checkboxes to be true.
 
 ## Installation Testing
 
-- [ ] I have tested that Cline can successfully set up this server using only the README.md and/or
+- [x] I have tested that Cline can successfully set up this server using only the README.md and/or
   llms-install.md file.
 - [x] The server is stable and ready for public use.
 

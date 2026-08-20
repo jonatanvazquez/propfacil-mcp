@@ -33,6 +33,9 @@ the remote Streamable HTTP endpoint. Publication is automated by
 
 GitHub OIDC is used for namespace verification, so no registry token is stored as a secret.
 
+Published on **20 August 2026** as version `1.3.8`; the Registry reports status `active` and
+`isLatest: true`. Release tag: [`v1.3.8`](https://github.com/jonatanvazquez/propfacil-mcp/releases/tag/v1.3.8).
+
 ## Smithery
 
 Publish the existing URL rather than uploading or rebuilding the server:
@@ -43,6 +46,9 @@ smithery mcp publish "https://www.propfacil.com/api/mcp" -n @jonatanvazquez/prop
 
 Smithery can scan the public tools without OAuth. If a scan requires static metadata, use the existing
 server card at `/.well-known/mcp/server-card.json`.
+
+Current status: CLI 4.11.1 publish flow prepared. Account authentication must be completed by the
+owner before the URL can be published.
 
 ## Glama
 
@@ -67,3 +73,7 @@ Use `assets/propfacil-icon-400.png`, this repository URL and [`llms-install.md`]
 installation target is the remote Streamable HTTP endpoint; it does not require cloning or a local command.
 The issue template requires truthful confirmation that Cline completed setup from the public instructions;
 use the prepared [issue draft](submission-drafts/cline-marketplace.md) only after that test passes.
+
+Completed on 20 August 2026 with Cline CLI 3.0.55. The server installed as `streamableHttp` without
+warnings, and the submission is tracked in
+[cline/mcp-marketplace#2287](https://github.com/cline/mcp-marketplace/issues/2287).

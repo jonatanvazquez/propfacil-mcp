@@ -65,11 +65,14 @@ This repository contains public distribution metadata, installation instructions
 the hosted PropFácil MCP server. The production backend is maintained separately.
 
 - Official MCP Registry metadata: [`server.json`](server.json)
+- Official MCP Registry status: [`io.github.jonatanvazquez/propfacil` 1.3.8](https://registry.modelcontextprotocol.io/v0.1/servers?search=io.github.jonatanvazquez%2Fpropfacil)
+- GitHub release: [`v1.3.8`](https://github.com/jonatanvazquez/propfacil-mcp/releases/tag/v1.3.8)
 - Generic client configuration: [`.mcp.json`](.mcp.json)
 - Agent-readable installer guidance: [`llms-install.md`](llms-install.md)
 - Reusable directory listing fields: [`directory-profile.json`](directory-profile.json)
 - Launch runbook: [`docs/launch-runbook.md`](docs/launch-runbook.md)
 - Directory-specific notes: [`docs/directory-submissions.md`](docs/directory-submissions.md)
+- Cline Marketplace submission: [issue #2287](https://github.com/cline/mcp-marketplace/issues/2287)
 
 ## Policies and support
 
