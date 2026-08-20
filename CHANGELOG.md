@@ -9,6 +9,7 @@ All notable distribution metadata changes are documented here.
 - Updated validation for the v13 MCP Apps resource and the thirteen-tool production surface.
 - Documented current Official MCP Registry lifecycle states while retaining immutable version metadata.
 - Published `io.github.jonatanvazquez/propfacil` 1.3.8 to the Official MCP Registry and opened the Cline Marketplace submission.
+- Published the hosted endpoint to Smithery as `jonatan/propfacil`.
 
 ## 1.3.1 — 2026-08-18
 

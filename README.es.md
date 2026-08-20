@@ -58,6 +58,7 @@ El backend de producción se mantiene por separado.
 
 - Metadata del Official MCP Registry: [`server.json`](server.json)
 - Registro oficial activo: [`io.github.jonatanvazquez/propfacil` 1.3.8](https://registry.modelcontextprotocol.io/v0.1/servers?search=io.github.jonatanvazquez%2Fpropfacil)
+- Publicación en Smithery: [`jonatan/propfacil`](https://smithery.ai/servers/jonatan/propfacil)
 - Release de GitHub: [`v1.3.8`](https://github.com/jonatanvazquez/propfacil-mcp/releases/tag/v1.3.8)
 - Configuración genérica: [`.mcp.json`](.mcp.json)
 - Instrucciones para agentes: [`llms-install.md`](llms-install.md)

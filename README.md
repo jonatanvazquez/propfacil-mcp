@@ -66,6 +66,7 @@ the hosted PropFácil MCP server. The production backend is maintained separatel
 
 - Official MCP Registry metadata: [`server.json`](server.json)
 - Official MCP Registry status: [`io.github.jonatanvazquez/propfacil` 1.3.8](https://registry.modelcontextprotocol.io/v0.1/servers?search=io.github.jonatanvazquez%2Fpropfacil)
+- Smithery listing: [`jonatan/propfacil`](https://smithery.ai/servers/jonatan/propfacil)
 - GitHub release: [`v1.3.8`](https://github.com/jonatanvazquez/propfacil-mcp/releases/tag/v1.3.8)
 - Generic client configuration: [`.mcp.json`](.mcp.json)
 - Agent-readable installer guidance: [`llms-install.md`](llms-install.md)

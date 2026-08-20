@@ -112,7 +112,7 @@ Ruta recomendada:
 
 1. Entrar a `https://smithery.ai/new` con la cuenta propietaria del namespace.
 2. Introducir `https://www.propfacil.com/api/mcp`.
-3. Elegir el nombre `@jonatanvazquez/propfacil`, si está disponible.
+3. Usar el nombre `jonatan/propfacil` dentro del namespace propietario.
 4. Permitir el escaneo del contenido público. Si solicita autenticación para completar la parte
    protegida, vincular una cuenta de revisión sin compartir su contraseña públicamente.
 5. Si el escáner no puede completar la detección, usar la server card pública
@@ -125,7 +125,7 @@ Alternativa por CLI:
 ```sh
 smithery auth login
 smithery mcp publish 'https://www.propfacil.com/api/mcp' \
-  -n @jonatanvazquez/propfacil
+  -n jonatan/propfacil
 ```
 
 Si el escaneo devuelve `403`, revisar WAF/bot protection. Un flujo que requiere OAuth debe iniciar
@@ -220,7 +220,7 @@ Para cada cambio público:
 | Commit del repositorio público | `5eb889822b8467e942cb44fdf207f9831eb55f94` |
 | Commit/deployment del backend | `c9941a0` desplegado y verificado en producción |
 | Official MCP Registry | `1.3.8` activo desde 2026-08-20; workflow OIDC exitoso |
-| Smithery | CLI 4.11.1 listo; autenticación del propietario pendiente |
+| Smithery | [`jonatan/propfacil`](https://smithery.ai/servers/jonatan/propfacil) publicado el 2026-08-20; release `7b8b1ab1-9e5c-4e4e-b427-73177694baa4` aceptado |
 | Cline Marketplace | Prueba real con Cline CLI 3.0.55 completada; [issue #2287](https://github.com/cline/mcp-marketplace/issues/2287) abierto |
 | Glama | Espera ingestión automática del Registry y posterior claim |
 | MCP.so | Datos enviados al checkout; pago Stripe de USD 39 pendiente de método de pago |
