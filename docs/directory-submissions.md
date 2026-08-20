@@ -41,14 +41,15 @@ Published on **20 August 2026** as version `1.3.8`; the Registry reports status 
 Publish the existing URL rather than uploading or rebuilding the server:
 
 ```sh
-smithery mcp publish "https://www.propfacil.com/api/mcp" -n @jonatanvazquez/propfacil
+smithery mcp publish "https://www.propfacil.com/api/mcp" -n jonatan/propfacil
 ```
 
 Smithery can scan the public tools without OAuth. If a scan requires static metadata, use the existing
 server card at `/.well-known/mcp/server-card.json`.
 
-Current status: CLI 4.11.1 publish flow prepared. Account authentication must be completed by the
-owner before the URL can be published.
+Published on **20 August 2026** as
+[`jonatan/propfacil`](https://smithery.ai/servers/jonatan/propfacil). Smithery accepted release
+`7b8b1ab1-9e5c-4e4e-b427-73177694baa4` for the hosted endpoint.
 
 ## Glama
 
