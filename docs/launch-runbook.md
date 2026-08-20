@@ -4,7 +4,7 @@ Este documento deja preparada la publicación de **PropFácil MCP** en el Offici
 los principales directorios. El backend ya está alojado; los catálogos deben apuntar al endpoint
 remoto y nunca intentar construir el backend privado desde este repositorio.
 
-Fuentes revisadas el **17 de agosto de 2026**:
+Fuentes revisadas el **20 de agosto de 2026**:
 
 - [Official MCP Registry: servidores remotos](https://modelcontextprotocol.io/registry/remote-servers)
 - [Official MCP Registry: GitHub Actions](https://modelcontextprotocol.io/registry/github-actions)
@@ -12,8 +12,9 @@ Fuentes revisadas el **17 de agosto de 2026**:
 - [Smithery: publicar por URL](https://smithery.ai/docs/build/publish)
 - [Cline MCP Marketplace: proceso de envío](https://github.com/cline/mcp-marketplace)
 
-El Registry oficial sigue en preview y no permite retirar una versión publicada. Por eso el tag de
-release se crea sólo después de aprobar el checklist “go/no-go”.
+El Registry oficial sigue en preview. La metadata de una versión publicada no se reemplaza: cualquier
+corrección exige una versión nueva. El CLI actual permite cambiar el estado de una release a
+`deprecated` o `deleted`; por eso el tag se crea sólo después de aprobar el checklist “go/no-go”.
 
 ## Estado actual
 
@@ -21,12 +22,12 @@ release se crea sólo después de aprobar el checklist “go/no-go”.
 |---|---|
 | Repositorio público | Listo: `https://github.com/jonatanvazquez/propfacil-mcp` |
 | Endpoint remoto | Listo: `https://www.propfacil.com/api/mcp` |
-| `server.json` | Válido, nombre `io.github.jonatanvazquez/propfacil`, versión `1.3.1` |
+| `server.json` | Válido ante la API oficial, nombre `io.github.jonatanvazquez/propfacil`, versión `1.3.8` |
 | Workflow de validación | Listo y probado en `main` |
 | Workflow del Registry | Listo; se activa con un tag `v*` o manualmente |
 | Assets y textos | Listos en `assets/` y `directory-profile.json` |
 | Instrucciones de instalación | Listas en README, `docs/installation.md` y `llms-install.md` |
-| Publicación en catálogos | Pendiente de decisión; no se ha creado el tag ni enviado formularios |
+| Publicación en catálogos | Pendiente de autorización final; no se ha creado el tag ni enviado formularios |
 
 ## Go/no-go
 
@@ -41,15 +42,15 @@ No publicar hasta que todos los puntos siguientes estén completos:
 - [ ] GitHub Actions **Validate distribution** está verde en el commit de release.
 - [ ] `server.json`, `directory-profile.json`, ambos README y `CHANGELOG.md` describen la misma versión.
 - [ ] Se revisaron disponibilidad, límites de tasa, WAF, alertas y soporte operativo.
-- [ ] Se acepta que la metadata ya publicada en el Registry es inmutable para esa versión y que hoy
-  no existe un flujo de unpublish.
+- [ ] Se acepta que la metadata ya publicada es inmutable para esa versión; una emergencia se
+  atiende con `mcp-publisher status --status deprecated` o `--status deleted`, según corresponda.
 
 Nunca publicar contraseñas demo, tokens OAuth, variables de producción, claves privadas o secretos
 del proveedor. Ningún directorio necesita una API key de PropFácil.
 
 ## 1. Congelar y validar la release
 
-1. Elegir la versión. Para el primer lanzamiento preparado actualmente: `1.3.1` / `v1.3.1`.
+1. Elegir la versión. Para el primer lanzamiento preparado actualmente: `1.3.8` / `v1.3.8`.
 2. Si hubo cambios de producto, actualizar primero el backend y desplegarlo; después actualizar
    `server.json`, el perfil, los README y el changelog.
 3. Confirmar que el árbol de trabajo está limpio y que `main` contiene el commit aprobado.
@@ -80,11 +81,11 @@ usuario de GitHub.
 Con el go/no-go aprobado:
 
 ```sh
-git tag -a v1.3.1 -m "PropFácil MCP 1.3.1"
-git push origin v1.3.1
+git tag -a v1.3.8 -m "PropFácil MCP 1.3.8"
+git push origin v1.3.8
 ```
 
-El tag activa el workflow, valida que `v1.3.1` coincida con `server.json`, valida el documento ante
+El tag activa el workflow, valida que `v1.3.8` coincida con `server.json`, valida el documento ante
 el Registry, obtiene identidad GitHub por OIDC y publica la metadata. No ejecutar manualmente el
 workflow antes del lanzamiento: `workflow_dispatch` también publica.
 
@@ -98,7 +99,7 @@ curl --fail --silent --show-error \
 ```
 
 - [ ] El workflow terminó en `success`.
-- [ ] La API contiene `io.github.jonatanvazquez/propfacil` versión `1.3.1`.
+- [ ] La API contiene `io.github.jonatanvazquez/propfacil` versión `1.3.8`.
 - [ ] La URL remota es exactamente `https://www.propfacil.com/api/mcp`.
 - [ ] Iconos, repositorio y website abren correctamente desde el registro publicado.
 
@@ -116,8 +117,8 @@ Ruta recomendada:
    protegida, vincular una cuenta de revisión sin compartir su contraseña públicamente.
 5. Si el escáner no puede completar la detección, usar la server card pública
    `https://www.propfacil.com/.well-known/mcp/server-card.json`.
-6. Revisar que Smithery describa el endpoint como Streamable HTTP, muestre las doce herramientas y
-   distinga acceso público de OAuth.
+6. Revisar que Smithery describa el endpoint como Streamable HTTP, muestre doce herramientas para el
+   modelo más una privada para restauración y distinga acceso público de OAuth.
 
 Alternativa por CLI:
 
@@ -157,18 +158,23 @@ lanzamiento.
 ### Glama
 
 Esperar la ingestión del Official MCP Registry, buscar PropFácil y reclamar el perfil si aparece.
-Si requiere envío manual, usar el repositorio público y marcarlo como servidor remoto; no seleccionar
-una opción que intente construir el backend.
+Glama declara que replica todo el Registry oficial. Para un conector alojado como PropFácil, su
+pipeline se conecta al endpoint Streamable HTTP; no enviar este repositorio de metadata como si
+fuera el código compilable del backend.
 
 ### MCP.so
 
-Enviar el repositorio público, seleccionar **Remote Server** y reutilizar el icono de 512×512, el
-endpoint y los campos de `directory-profile.json`.
+El formulario actual de **Remote Server** pide el endpoint y el nombre. La publicación inmediata es
+de pago: **USD 39** al 20 de agosto de 2026. No pagar ni enviar sin autorización expresa. Valores:
+
+- Remote endpoint URL: `https://www.propfacil.com/api/mcp`.
+- Name: `PropFácil`.
 
 ### PulseMCP
 
-Cuando su intake acepte nuevas entradas, enviar el endpoint y repositorio públicos e identificarlo
-como servidor remoto comunitario mantenido por PropFácil.
+Las altas y cambios manuales están temporalmente pausados. PulseMCP recomienda publicar primero en
+el Official MCP Registry y afirma que lo ingerirá automáticamente; no hay un formulario accionable
+por ahora.
 
 En todos los casos comprobar nombre, descripción, auth, endpoint, enlaces legales, icono y versión
 después de que el listing sea visible.
@@ -192,7 +198,8 @@ Durante las primeras 72 horas vigilar:
 
 Si el problema está sólo en un directorio, corregir su listing sin alterar producción. Si afecta al
 servidor, restaurar la última versión estable, documentar el incidente y publicar metadata nueva sólo
-cuando corresponda. El Registry no permite retirar ni reemplazar la versión ya publicada.
+cuando corresponda. El Registry no reemplaza la metadata de una versión publicada; para una emergencia,
+cambiar el estado de esa release a `deprecated` o `deleted` con el publisher autenticado.
 
 ## Releases posteriores
 
@@ -209,15 +216,15 @@ Para cada cambio público:
 | Campo | Valor |
 |---|---|
 | Responsable | Pendiente |
-| Versión/tag | `1.3.1` / `v1.3.1` (pendiente de publicar) |
+| Versión/tag | `1.3.8` / `v1.3.8` (pendiente de publicar) |
 | Commit del repositorio público | Pendiente |
 | Commit/deployment del backend | Pendiente |
-| Official MCP Registry | Pendiente |
-| Smithery | Pendiente |
-| Cline Marketplace | Pendiente |
-| Glama | Pendiente |
-| MCP.so | Pendiente |
-| PulseMCP | Pendiente |
+| Official MCP Registry | `server.json` validado; tag/publicación pendientes |
+| Smithery | CLI/login no disponibles en este equipo; envío pendiente |
+| Cline Marketplace | Borrador listo; prueba real en Cline y issue pendientes |
+| Glama | Espera ingestión automática del Registry y posterior claim |
+| MCP.so | Formulario remoto listo; requiere autorizar pago de USD 39 |
+| PulseMCP | Altas manuales pausadas; espera ingestión automática del Registry |
 
 Los valores reutilizables para cada formulario están en
 [`directory-profile.json`](../directory-profile.json) y el detalle específico por catálogo en
