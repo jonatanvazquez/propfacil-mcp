@@ -28,7 +28,7 @@ the remote Streamable HTTP endpoint. Publication is automated by
 
 1. Confirm that the version in `server.json` matches the deployed server version.
 2. Confirm that the validation workflow passes on `main`.
-3. Create and push the unique semantic version tag `v1.3.1`.
+3. Create and push the unique semantic version tag `v1.3.8`.
 4. Verify the published record through the Registry API.
 
 GitHub OIDC is used for namespace verification, so no registry token is stored as a secret.
@@ -47,20 +47,23 @@ server card at `/.well-known/mcp/server-card.json`.
 ## Glama
 
 Glama ingests Official MCP Registry records. After registry publication, search for PropFácil and claim
-the resulting listing. Use the remote endpoint; do not configure Glama to build the private backend from
-this distribution repository.
+the resulting listing. PropFácil is a hosted connector: use the remote endpoint and do not configure
+Glama to build the private backend from this metadata-only repository.
 
 ## MCP.so
 
-Submit this repository URL and select **Remote Server**. Use `assets/propfacil-icon-512.png`, the production
-endpoint and the canonical listing fields above.
+Select **Remote Server** and use endpoint `https://www.propfacil.com/api/mcp` with name `PropFácil`.
+The current route advertises a USD 39 one-time paid submission, so payment and submission require a
+separate explicit approval.
 
 ## PulseMCP
 
-Submit the production endpoint and this repository when new listings are accepted. Use the canonical
-profile and identify PropFácil as a remote community server maintained by its provider.
+Manual submissions are temporarily paused. PulseMCP recommends the Official MCP Registry and says it
+will ingest entries from there automatically. Recheck the intake after the official release is visible.
 
 ## Cline Marketplace
 
 Use `assets/propfacil-icon-400.png`, this repository URL and [`llms-install.md`](../llms-install.md). The
 installation target is the remote Streamable HTTP endpoint; it does not require cloning or a local command.
+The issue template requires truthful confirmation that Cline completed setup from the public instructions;
+use the prepared [issue draft](submission-drafts/cline-marketplace.md) only after that test passes.

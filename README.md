@@ -18,7 +18,7 @@ and publishing tools.
 
 - **MCP endpoint:** `https://www.propfacil.com/api/mcp`
 - **Transport:** Streamable HTTP
-- **Current version:** `1.3.1`
+- **Current version:** `1.3.8`
 - **Server card:** `https://www.propfacil.com/.well-known/mcp/server-card.json`
 - **Documentation:** `https://www.propfacil.com/docs`
 
@@ -50,8 +50,8 @@ See [installation instructions](docs/installation.md) for ChatGPT, Codex, Cline 
 | Save, rename, remove from or delete favorite lists | OAuth |
 | View and publish the linked user's listings | OAuth |
 
-The server exposes twelve focused tools. See the complete [tool reference](docs/tools.md) and
-[authentication details](docs/authentication.md).
+The server exposes twelve model-visible tools plus one private UI restoration tool. See the complete
+[tool reference](docs/tools.md) and [authentication details](docs/authentication.md).
 
 ## Host compatibility
 

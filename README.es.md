@@ -15,7 +15,7 @@ La búsqueda, las fichas y el contacto disponible son públicos; favoritos, list
 
 - **Endpoint MCP:** `https://www.propfacil.com/api/mcp`
 - **Transporte:** Streamable HTTP
-- **Versión actual:** `1.3.1`
+- **Versión actual:** `1.3.8`
 - **Server card:** `https://www.propfacil.com/.well-known/mcp/server-card.json`
 - **Documentación:** `https://www.propfacil.com/docs`
 
@@ -49,6 +49,7 @@ y los [detalles de autenticación](docs/authentication.md).
 
 Todos los clientes MCP con Streamable HTTP pueden consumir las herramientas y resultados estructurados.
 Las interfaces enriquecidas requieren soporte para MCP Apps UI y las operaciones de cuenta requieren OAuth MCP.
+El servidor expone doce herramientas visibles para el modelo y una herramienta privada que restaura la UI.
 
 ## Alcance del repositorio
 

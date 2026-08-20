@@ -2,6 +2,13 @@
 
 All notable distribution metadata changes are documented here.
 
+## 1.3.8 — 2026-08-20
+
+- Aligned Registry and directory metadata with the deployed MCP server version 1.3.8.
+- Documented twelve model-visible tools plus the private UI restoration tool.
+- Updated validation for the v13 MCP Apps resource and the thirteen-tool production surface.
+- Documented current Official MCP Registry lifecycle states while retaining immutable version metadata.
+
 ## 1.3.1 — 2026-08-18
 
 - Added a go/no-go and launch runbook for the Official MCP Registry and downstream directories.
