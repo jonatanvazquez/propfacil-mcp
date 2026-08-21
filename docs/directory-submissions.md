@@ -28,13 +28,13 @@ the remote Streamable HTTP endpoint. Publication is automated by
 
 1. Confirm that the version in `server.json` matches the deployed server version.
 2. Confirm that the validation workflow passes on `main`.
-3. Create and push the unique semantic version tag `v1.3.8`.
+3. Create and push the unique semantic version tag `v1.3.9`.
 4. Verify the published record through the Registry API.
 
 GitHub OIDC is used for namespace verification, so no registry token is stored as a secret.
 
-Published on **20 August 2026** as version `1.3.8`; the Registry reports status `active` and
-`isLatest: true`. Release tag: [`v1.3.8`](https://github.com/jonatanvazquez/propfacil-mcp/releases/tag/v1.3.8).
+Published on **21 August 2026** as version `1.3.9`; the Registry reports status `active` and
+`isLatest: true`. Release tag: [`v1.3.9`](https://github.com/jonatanvazquez/propfacil-mcp/releases/tag/v1.3.9).
 
 ## Smithery
 
