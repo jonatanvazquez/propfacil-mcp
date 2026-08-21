@@ -18,7 +18,7 @@ and publishing tools.
 
 - **MCP endpoint:** `https://www.propfacil.com/api/mcp`
 - **Transport:** Streamable HTTP
-- **Current version:** `1.3.8`
+- **Current version:** `1.3.9`
 - **Server card:** `https://www.propfacil.com/.well-known/mcp/server-card.json`
 - **Documentation:** `https://www.propfacil.com/docs`
 
@@ -65,9 +65,9 @@ This repository contains public distribution metadata, installation instructions
 the hosted PropFácil MCP server. The production backend is maintained separately.
 
 - Official MCP Registry metadata: [`server.json`](server.json)
-- Official MCP Registry status: [`io.github.jonatanvazquez/propfacil` 1.3.8](https://registry.modelcontextprotocol.io/v0.1/servers?search=io.github.jonatanvazquez%2Fpropfacil)
+- Official MCP Registry status: [`io.github.jonatanvazquez/propfacil` 1.3.9](https://registry.modelcontextprotocol.io/v0.1/servers?search=io.github.jonatanvazquez%2Fpropfacil)
 - Smithery listing: [`jonatan/propfacil`](https://smithery.ai/servers/jonatan/propfacil)
-- GitHub release: [`v1.3.8`](https://github.com/jonatanvazquez/propfacil-mcp/releases/tag/v1.3.8)
+- GitHub release: [`v1.3.9`](https://github.com/jonatanvazquez/propfacil-mcp/releases/tag/v1.3.9)
 - Generic client configuration: [`.mcp.json`](.mcp.json)
 - Agent-readable installer guidance: [`llms-install.md`](llms-install.md)
 - Reusable directory listing fields: [`directory-profile.json`](directory-profile.json)

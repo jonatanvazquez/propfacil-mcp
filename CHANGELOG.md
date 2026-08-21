@@ -2,6 +2,13 @@
 
 All notable distribution metadata changes are documented here.
 
+## 1.3.9 — 2026-08-21
+
+- Added human-readable descriptions to every MCP input parameter for directory and ChatGPT scans.
+- Completed Smithery listing metadata with the PropFácil description, homepage and production icon.
+- Added an automated regression check so future tools cannot omit parameter descriptions.
+- Kept the thirteen-tool surface, OAuth scopes and v13 MCP Apps resource stable.
+
 ## 1.3.8 — 2026-08-20
 
 - Aligned Registry and directory metadata with the deployed MCP server version 1.3.8.

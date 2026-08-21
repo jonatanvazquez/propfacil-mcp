@@ -22,7 +22,7 @@ corrección exige una versión nueva. El CLI actual permite cambiar el estado de
 |---|---|
 | Repositorio público | Listo: `https://github.com/jonatanvazquez/propfacil-mcp` |
 | Endpoint remoto | Listo: `https://www.propfacil.com/api/mcp` |
-| `server.json` | Válido ante la API oficial, nombre `io.github.jonatanvazquez/propfacil`, versión `1.3.8` |
+| `server.json` | Válido ante la API oficial, nombre `io.github.jonatanvazquez/propfacil`, versión `1.3.9` |
 | Workflow de validación | Listo y probado en `main` |
 | Workflow del Registry | Listo; se activa con un tag `v*` o manualmente |
 | Assets y textos | Listos en `assets/` y `directory-profile.json` |
@@ -50,7 +50,7 @@ del proveedor. Ningún directorio necesita una API key de PropFácil.
 
 ## 1. Congelar y validar la release
 
-1. Elegir la versión. Para el primer lanzamiento preparado actualmente: `1.3.8` / `v1.3.8`.
+1. Elegir la versión. Para el lanzamiento preparado actualmente: `1.3.9` / `v1.3.9`.
 2. Si hubo cambios de producto, actualizar primero el backend y desplegarlo; después actualizar
    `server.json`, el perfil, los README y el changelog.
 3. Confirmar que el árbol de trabajo está limpio y que `main` contiene el commit aprobado.
@@ -81,11 +81,11 @@ usuario de GitHub.
 Con el go/no-go aprobado:
 
 ```sh
-git tag -a v1.3.8 -m "PropFácil MCP 1.3.8"
-git push origin v1.3.8
+git tag -a v1.3.9 -m "PropFácil MCP 1.3.9"
+git push origin v1.3.9
 ```
 
-El tag activa el workflow, valida que `v1.3.8` coincida con `server.json`, valida el documento ante
+El tag activa el workflow, valida que `v1.3.9` coincida con `server.json`, valida el documento ante
 el Registry, obtiene identidad GitHub por OIDC y publica la metadata. No ejecutar manualmente el
 workflow antes del lanzamiento: `workflow_dispatch` también publica.
 
@@ -99,7 +99,7 @@ curl --fail --silent --show-error \
 ```
 
 - [ ] El workflow terminó en `success`.
-- [ ] La API contiene `io.github.jonatanvazquez/propfacil` versión `1.3.8`.
+- [ ] La API contiene `io.github.jonatanvazquez/propfacil` versión `1.3.9`.
 - [ ] La URL remota es exactamente `https://www.propfacil.com/api/mcp`.
 - [ ] Iconos, repositorio y website abren correctamente desde el registro publicado.
 
@@ -216,10 +216,10 @@ Para cada cambio público:
 | Campo | Valor |
 |---|---|
 | Responsable | Apphive / PropFácil |
-| Versión/tag | `1.3.8` / [`v1.3.8`](https://github.com/jonatanvazquez/propfacil-mcp/releases/tag/v1.3.8) |
+| Versión/tag | `1.3.9` / [`v1.3.9`](https://github.com/jonatanvazquez/propfacil-mcp/releases/tag/v1.3.9) |
 | Commit del repositorio público | `5eb889822b8467e942cb44fdf207f9831eb55f94` |
 | Commit/deployment del backend | `c9941a0` desplegado y verificado en producción |
-| Official MCP Registry | `1.3.8` activo desde 2026-08-20; workflow OIDC exitoso |
+| Official MCP Registry | `1.3.9` activo desde 2026-08-21; workflow OIDC exitoso |
 | Smithery | [`jonatan/propfacil`](https://smithery.ai/servers/jonatan/propfacil) publicado el 2026-08-20; release `7b8b1ab1-9e5c-4e4e-b427-73177694baa4` aceptado |
 | Cline Marketplace | Prueba real con Cline CLI 3.0.55 completada; [issue #2287](https://github.com/cline/mcp-marketplace/issues/2287) abierto |
 | Glama | Espera ingestión automática del Registry y posterior claim |

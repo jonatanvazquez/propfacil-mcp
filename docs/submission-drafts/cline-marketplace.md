@@ -30,4 +30,4 @@ interactive property cards, comparison and maps. No API key or local server proc
 
 Endpoint: `https://www.propfacil.com/api/mcp`
 
-Version: `1.3.8`
+Version: `1.3.9`
